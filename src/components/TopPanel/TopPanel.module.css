@@ -1,0 +1,53 @@
+.topPanelWrappper {
+  color: rgb(255, 255, 255);
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  top: 0;
+  position: sticky;
+  background-color: rgba(1, 1, 19, 0.096);
+  backdrop-filter: blur(3px);
+  height: 60px;
+  padding: 1rem;
+  box-sizing: border-box;
+  gap: 1.25rem;
+  justify-content: end;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 3;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.specialCases {
+  color: #6a5acd;
+  font-weight: bolder;
+}
+
+.buttonContainer {
+  justify-self: center;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialLinks i {
+  color: white;
+  font-size: 20px;
+}
+
+.socialLinks a {
+  transition: all 0.3s ease;
+}
+
+.socialLinks a:hover {
+  filter: drop-shadow(0 0 8px #6a5acd);
+  transform: translateY(-4px);
+}

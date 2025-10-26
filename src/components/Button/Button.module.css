@@ -1,0 +1,12 @@
+.button {
+  all: unset;
+  color: #b0a4ff;
+  font-weight: 600;
+  transition: box-shadow ease 0.4s, background ease-in 0.2s;
+  cursor: pointer;
+}
+
+.button:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
