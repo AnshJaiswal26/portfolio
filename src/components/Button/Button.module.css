@@ -1,12 +1,19 @@
 .button {
   all: unset;
-  color: #b0a4ff;
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+  color: var(--color-primary);
   font-weight: 600;
   transition: box-shadow ease 0.4s, background ease-in 0.2s;
   cursor: pointer;
+  text-wrap: nowrap;
 }
 
 .button:hover {
   text-decoration: underline;
   color: #ffffff;
+}
+
+.active {
+  color: white;
+  text-decoration: underline;
 }

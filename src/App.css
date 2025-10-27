@@ -1,107 +1,94 @@
-.main-content {
+:root {
+  --color-purple: #b0a4ff;
+
+  --color-cyan: #a4fff7;
+
+  --color-pink: #eaa4ff;
+
+  --color-blue: #4684ff;
+
+  --color-green: #88ffa8;
+
+  --color-primary: var(--color-purple);
+
+  --theme-popup-left: 0;
+  --theme-popup-top: 0;
+}
+
+.page-wrapper {
   position: relative;
   display: flex;
-  flex-direction: column;
-  background: inherit;
-  box-sizing: border-box;
-  overflow: visible;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
   height: 100vh;
+  background: radial-gradient(circle at center, #01051d, #010115, #000008);
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 300%;
+  pointer-events: none;
+  animation: rotate 300s ease-in-out infinite alternate;
+}
+
+.star {
+  position: absolute;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--color-primary);
+  animation: flicker 3s ease-in-out infinite alternate;
+}
+
+@keyframes flicker {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+.main-content {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: inherit;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 
-.space-background {
-  position: absolute;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 1000px;
-  opacity: 1;
-  box-sizing: border-box;
-  border: 1px solid #000;
-  background: radial-gradient(circle at center, #01051d, #010115, #000008);
+.main-content::-webkit-scrollbar-track {
+  background-color: inherit;
+}
+.main-content::-webkit-scrollbar {
+  background-color: inherit;
+  width: 3px;
 }
 
-/* Shining layer */
-.space-background::after {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(#b3fff9 1px, transparent 1px);
-  background-size: 150px 150px;
-  opacity: 0.6;
-  filter: drop-shadow(0 0 4px #99ccff);
-  animation: shineStars 3s ease-in-out infinite alternate;
-  pointer-events: none;
+.main-content::-webkit-scrollbar-thumb {
+  background-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+  opacity: 0.4 !important;
+  border-radius: 10px;
 }
 
-/* Layer 1 – Slow drift right-down */
-.space-background::before {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(#b3fff9 1px, transparent 1px);
-  background-size: 180px 180px;
-  opacity: 0.6;
-  filter: drop-shadow(0 0 4px #99ccff);
-  animation: moveStars1 100s linear infinite,
-    shineStars 3s ease-in-out infinite alternate;
-  pointer-events: none;
-}
-
-/* Layer 2 – Medium drift left-up */
-.space-background::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(white 1px, transparent 1px);
-  background-size: 250px 250px;
-  opacity: 0.3;
-  filter: drop-shadow(0 0 6px #ffffff);
-  animation: moveStars2 140s linear infinite,
-    shineStars 3s ease-in-out infinite alternate;
-  pointer-events: none;
-}
-
-/* Animations going in opposite/randomish directions */
-@keyframes moveStars1 {
-  from {
-    transform: translate(0, 0);
-  }
-  to {
-    transform: translate(150px, 120px);
-  }
-}
-
-@keyframes moveStars2 {
-  from {
-    transform: translate(0, 0);
-  }
-  to {
-    transform: translate(-120px, -150px);
-  }
-}
-
-@keyframes shineStars {
-  0% {
-    opacity: 0.2;
-    filter: drop-shadow(0 0 2px #ffffff22);
-  }
-  50% {
-    opacity: 1;
-    filter: drop-shadow(0 0 8px #99ccff);
-  }
-  100% {
-    opacity: 0.2;
-    filter: drop-shadow(0 0 2px #ffffff22);
-  }
+.main-content::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary);
 }

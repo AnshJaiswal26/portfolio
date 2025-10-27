@@ -4,8 +4,8 @@
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 4rem;
   flex-wrap: wrap;
 }
 
@@ -14,29 +14,28 @@
   flex-direction: column;
   color: white;
   gap: 0.3rem;
-  width: 500px;
+  max-width: 500px;
 }
 
 .content span:first-child {
-  font-size: 1.5rem;
+  font-size: clamp(0.8rem, 4vw, 1.5rem);
   font-weight: bold;
 }
 
 .content span:nth-child(n + 2) {
-  font-size: 2rem;
+  font-size: clamp(1.15rem, 6vw, 2rem);
   font-weight: bold;
 }
 
 .content div > span {
-  font-size: 1.25rem;
+  font-size: clamp(0.8rem, 3.6vw, 1.25rem);
   font-weight: bold;
 }
-
 .summary {
   margin-top: 10px;
-  color: #e6e3ff;
+  color: #ffffff;
   line-height: 1.8;
-  font-size: 1rem !important;
+  font-size: clamp(0.8rem, 3.6vw, 1.25rem) !important;
   font-weight: 100 !important;
 }
 
@@ -44,10 +43,11 @@
   font-family: monospace;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid #b0a4ff; /* cursor effect */
+  border-right: 3px solid var(--color-primary); /* cursor effect */
   width: 0;
-  text-shadow: 0 0 20px #6e57ffd5;
-  color: #b0a4ff;
+  text-shadow: 0 0 20px var(--color-primary);
+  color: var(--color-primary);
+  text-wrap: wrap;
   animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;
 }
 
@@ -75,22 +75,24 @@
   border-radius: 50px;
   font-weight: bold;
   padding: 0.8rem 1rem;
-  background-color: #b0a4ff;
+  background-color: var(--color-primary);
   color: #090234;
   transition: box-shadow ease-in 0.2s;
 }
 
 .cvBtnWrapper button:hover {
-  box-shadow: 0 0 20px #6047ff;
+  box-shadow: 0 0 20px var(--color-primary);
 }
 
 .profileIcon {
   background-color: white;
-  padding: 1rem;
+  padding: max(1.25rem, 0.5vw);
   box-sizing: border-box;
   border-radius: 50%;
+  box-shadow: 0 0 20px var(--color-primary);
 }
 
 .profileIcon img {
   width: 24vw;
+  max-width: 300px;
 }

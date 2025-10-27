@@ -1,0 +1,106 @@
+.skillsWrapper {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: bold;
+  color: var(--color-primary);
+  text-shadow: 0 0 15px var(--color-primary);
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+.sectionTitle {
+  justify-self: center;
+}
+
+.rows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+  justify-items: center;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+.skillCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 1.25rem 1rem;
+  min-width: 130px;
+  min-height: 130px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUpFade 0.8s ease forwards;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.skillCard:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 0 20px var(--color-primary);
+}
+
+.skillCard i {
+  font-size: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.skillCard span {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.skillCard:hover span {
+  text-decoration: underline;
+}
+
+.skillCard:hover i {
+  text-decoration: none;
+  transform: rotate(10deg) scale(1.1);
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./About.module.css";
 import { cv, userIcon } from "../../assets";
+import SlideInContainer from "../SlideInContainer/SlideInContainer";
 
 export default function About() {
   const handleDownload = () => {
@@ -11,27 +12,28 @@ export default function About() {
   };
 
   return (
-    <div className={styles.aboutWrapper}>
-      <div className={styles.content}>
-        <span>Hi, I am</span>
-        <span> Ansh Jaiswal</span>
-        <TypingText />
-        <span className={styles.summary}>
-          I’m a full-stack developer building scalable and responsive web
-          applications using React.js, Tailwind CSS, and Spring Boot with MySQL
-          & MongoDB. I love creating efficient, user-friendly solutions.
-        </span>
-        <div className={styles.cvBtnWrapper}>
-          <button onClick={handleDownload}>Download CV</button>
+    <SlideInContainer>
+      <div className={styles.aboutWrapper}>
+        <div>
+          <div className={styles.profileIcon}>
+            <img src={userIcon} />
+          </div>
+        </div>
+        <div className={styles.content}>
+          <span>Hi, I am</span>
+          <span> Ansh Jaiswal</span>
+          <TypingText />
+          <span className={styles.summary}>
+            I’m a full-stack developer building scalable and responsive web
+            applications using React.js, Tailwind CSS, and Spring Boot with
+            MySQL & MongoDB. I love creating efficient, user-friendly solutions.
+          </span>
+          <div className={styles.cvBtnWrapper}>
+            <button onClick={handleDownload}>Download CV</button>
+          </div>
         </div>
       </div>
-
-      <div>
-        <div className={styles.profileIcon}>
-          <img src={userIcon} />
-        </div>
-      </div>
-    </div>
+    </SlideInContainer>
   );
 }
 
