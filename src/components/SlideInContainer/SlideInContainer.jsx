@@ -13,7 +13,7 @@ export default function SlideInContainer({ children }) {
       mainContent.style.overflow = "auto";
     }, 800);
 
-    setTimeout(() => setVisible(true), 0);
+    setTimeout(() => setVisible(true), 200);
   }, []);
 
   return (

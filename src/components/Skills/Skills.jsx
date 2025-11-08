@@ -119,7 +119,6 @@ export default function Skills() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.skillCard}
-                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <i className={skill.icon} style={{ color: skill.color }}></i>
                   <span>{skill.name}</span>

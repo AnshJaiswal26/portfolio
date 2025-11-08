@@ -86,13 +86,17 @@
 
 .profileIcon {
   background-color: white;
-  padding: max(1.25rem, 0.5vw);
+  padding: max(1rem, 0.5vw);
   box-sizing: border-box;
   border-radius: 50%;
   box-shadow: 0 0 20px var(--color-primary);
+  overflow: hidden;
 }
 
 .profileIcon img {
+  top: 50%;
   width: 24vw;
+  height: 300px;
   max-width: 300px;
+  overflow: hidden;
 }

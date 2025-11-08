@@ -1,0 +1,73 @@
+.educationWrapper {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  flex-wrap: wrap;
+  gap: 3rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: bold;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 15px var(--color-primary);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-primary);
+  border-radius: 16px;
+  padding: 1.8rem;
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(3px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 35px var(--color-primary);
+}
+
+.degree {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.branch {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.institution {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.duration {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  margin-top: 0.25rem;
+}
+
+.achievements {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.achievements li {
+  margin-bottom: 0.4rem;
+  opacity: 0.9;
+}

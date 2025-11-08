@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./About.module.css";
-import { cv, userIcon } from "../../assets";
+import { cv, passportImg } from "../../assets";
 import SlideInContainer from "../SlideInContainer/SlideInContainer";
 
 export default function About() {
@@ -16,7 +16,7 @@ export default function About() {
       <div className={styles.aboutWrapper}>
         <div>
           <div className={styles.profileIcon}>
-            <img src={userIcon} />
+            <img src={passportImg} />
           </div>
         </div>
         <div className={styles.content}>

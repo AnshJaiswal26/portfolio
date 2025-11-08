@@ -51,19 +51,25 @@ export default function TopPanel({ activePage, setActivePage }) {
             <span className={styles.specialCases}>{">"}</span>
           </div>
           <div className={styles.buttonContainer}>
-            {["About", "Skills", "Experience & Projects", "Education"].map(
-              (text, index) => (
-                <Button
-                  isActive={activePage === text}
-                  text={text}
-                  key={index}
-                  onClick={() => setActivePage(text)}
-                />
-              )
-            )}
+            {[
+              "About",
+              "Skills",
+              "Projects",
+              "Certifications",
+              "Experience",
+              "Education",
+              "Contact",
+            ].map((text, index) => (
+              <Button
+                isActive={activePage === text}
+                text={text}
+                key={index}
+                onClick={() => setActivePage(text)}
+              />
+            ))}
           </div>
-          <div className={styles.socialLinks}>
-            <a href="mailto:anshjaiswalj26@gmail.com">
+          {/* <div className={styles.socialLinks}>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anshjaiswalj26@gmail.com">
               <i className="fa-solid fa-envelope"></i>
             </a>
             <a href="https://github.com/AnshJaiswal26" target="_blank">
@@ -72,7 +78,7 @@ export default function TopPanel({ activePage, setActivePage }) {
             <a href="https://linkedin.com/in/ansh-jaiswal" target="_blank">
               <i className="fa-brands fa-linkedin"></i>
             </a>
-          </div>
+          </div> */}
 
           <div className={styles.buttonContainer}>
             <Button
@@ -82,7 +88,7 @@ export default function TopPanel({ activePage, setActivePage }) {
                 const rect = e.target.getBoundingClientRect();
                 document.documentElement.style.setProperty(
                   "--theme-popup-left",
-                  `${rect.left - 55}px`
+                  `${rect.left - 45}px`
                 );
 
                 document.documentElement.style.setProperty(
