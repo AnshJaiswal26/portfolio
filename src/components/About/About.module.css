@@ -1,6 +1,6 @@
 .aboutWrapper {
   width: 100%;
-  padding: 5rem;
+  padding: 6vw;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@
 }
 
 .content div > span {
-  font-size: clamp(0.8rem, 3.6vw, 1.25rem);
+  font-size: clamp(0.8rem, 3vw, 1.25rem);
   font-weight: bold;
 }
 .summary {
@@ -36,28 +36,18 @@
   color: #ffffff;
   line-height: 1.8;
   font-size: clamp(0.8rem, 3.6vw, 1.25rem) !important;
-  font-weight: 100 !important;
+  font-weight: 300 !important;
 }
 
 .typingText {
   font-family: monospace;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid var(--color-primary); /* cursor effect */
-  width: 0;
+  border-right: 3px solid var(--color-primary);
   text-shadow: 0 0 20px var(--color-primary);
   color: var(--color-primary);
   text-wrap: wrap;
-  animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 10ch;
-  } /* number of characters */
+  animation: blink 0.75s step-end infinite;
 }
 
 @keyframes blink {
@@ -85,18 +75,39 @@
 }
 
 .profileIcon {
-  background-color: white;
-  padding: max(1rem, 0.5vw);
+  background-color: #ffffff;
   box-sizing: border-box;
   border-radius: 50%;
   box-shadow: 0 0 20px var(--color-primary);
   overflow: hidden;
+  width: 320px;
+  height: 320px;
+  border: 15px solid #ffffff;
 }
 
 .profileIcon img {
-  top: 50%;
-  width: 24vw;
-  height: 300px;
-  max-width: 300px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  box-sizing: border-box;
+}
+
+/* For mobile screens */
+@media (max-width: 600px) {
+  .profileIcon {
+    width: 200px;
+    height: 200px;
+    border: 10px solid #fff;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 350px) {
+  .profileIcon {
+    width: 150px;
+    height: 150px;
+    border: 8px solid #fff;
+  }
 }

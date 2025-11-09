@@ -16,12 +16,11 @@
 .topPanelContent {
   width: 100%;
   overflow-x: auto;
-  overflow-y: auto;
+  overflow-y: hidden;
   scrollbar-width: none;
   display: flex;
   align-items: center;
   box-sizing: border-box;
-
   gap: 1.5rem;
   padding: 1rem 2rem;
   justify-content: space-evenly;
@@ -66,7 +65,6 @@
 
 /* scroll buttons */
 .scrollBtn {
-  position: sticky;
   display: none;
   background: var(--color-primary);
   border: none;
