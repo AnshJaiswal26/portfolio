@@ -26,7 +26,7 @@ const projects = [
     description:
       "Building a browser extension that automatically extracts trade setup data (entry, stop-loss, target, and quantity) directly from broker platforms such as Dhan, Zerodha, Upstox, AngelOne, and Groww. The extension seamlessly syncs captured trades with the Find My Edge dashboard, enabling real-time analytics, strategy tagging, and rule-based performance tracking.",
     tech: ["Chrome Extension", "React.js", "JavaScript", "Spring Boot"],
-    link: "https://github.com/AnshJaiswal26/strategy-capture-extension",
+    link: "https://extensions-guide.vercel.app",
     status: "In Progress",
   },
   {
@@ -35,7 +35,7 @@ const projects = [
     description:
       "Created an AI-powered Chrome extension that assists users with online research by summarizing and analyzing web content in real time. The backend, built with Spring Boot and Spring Webflux, communicates with the Gemini API to generate context-aware insights and summaries.",
     tech: ["Spring Boot", "React.js", "Gemini API", "Chrome Extension"],
-    link: "https://github.com/AnshJaiswal26/smart-research-assistant",
+    link: "https://extensions-guide.vercel.app",
     status: "Completed",
   },
   {
@@ -44,7 +44,7 @@ const projects = [
     description:
       "Built an AI-based Chrome extension that drafts professional emails instantly. Integrated Spring Boot backend with Gemini API to generate tone-adjusted, context-specific email content for users.",
     tech: ["Spring Boot", "Gemini API", "Chrome Extension", "React.js"],
-    link: "https://github.com/AnshJaiswal26/smart-email-generator",
+    link: "https://extensions-guide.vercel.app",
     status: "Completed",
   },
   {
@@ -62,7 +62,7 @@ export default function Projects() {
   return (
     <SlideInContainer>
       <div className={styles.experienceWrapper}>
-        <h2 className={styles.title}>💼 Experience & Projects</h2>
+        <h2 className={styles.title}>🧩 Projects</h2>
         <div className={styles.cards}>
           {projects.map((exp, i) => (
             <div key={i} className={styles.card}>

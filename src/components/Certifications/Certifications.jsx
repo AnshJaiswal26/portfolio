@@ -10,7 +10,7 @@ import styles from "./Certifications.module.css";
 export default function Certifications() {
   const certifications = [
     {
-      title: "JPMorhan Chase & Co Virtual Internship",
+      title: "JPMorgan Chase & Co Virtual Internship",
       issuer: "J.P. Morgan & Forage",
       icon: "fa-solid fa-briefcase",
       color: "#004f9dff",

@@ -21,7 +21,6 @@ function App() {
       meteor.classList.add("meteor");
       meteor.style.top = `${Math.random() * 100}%`;
       meteor.style.left = `${Math.random() * 100}%`;
-      meteor.style.animationDelay = "0s";
 
       const meteorContainer = document.getElementById("meteor-container");
       meteorContainer.appendChild(meteor);

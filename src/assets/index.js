@@ -16,5 +16,5 @@ export { osCertificate };
 import postmainCertificate from "./PostmainCertificate.pdf";
 export { postmainCertificate };
 
-import passportImg from "./passport_size_image.jpeg";
+import passportImg from "./passportImg.png";
 export { passportImg };

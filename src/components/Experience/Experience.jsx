@@ -20,7 +20,7 @@ export default function Experience() {
   return (
     <SlideInContainer>
       <div className={styles.experienceWrapper}>
-        <h2 className={styles.title}>💼 Experience & Projects</h2>
+        <h2 className={styles.title}>💼 Experience</h2>
         <div className={styles.cards}>
           {experiences.map((exp, i) => (
             <div key={i} className={styles.card}>
